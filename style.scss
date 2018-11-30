@@ -1,0 +1,132 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+$burgundy: #581912;
+$offwhite: #fff6f6;
+
+.navbar {
+  color: $burgundy;
+  height: 100%;
+  padding: 0px;
+  position: fixed;
+  margin: 0;
+  z-index: 5;
+}
+
+.sidemenu {
+  background-color: rgba(243, 168, 94, 0.7);
+  border-right: 0.5px solid $burgundy;
+  height: 100%;
+  margin: 0;
+  position: absolute;
+  left: -250px;
+  top: 0;
+  transition: 0.7s ease;
+  padding-left: 5px;
+  width: 160px;
+  z-index: 3;
+}
+
+.showsidemenu {
+  transition: 0.7s ease;
+  left: 0;
+}
+
+.burger {
+  display: inline-block;
+  cursor: pointer;
+  height: 45px;
+  width: 55px;
+  margin: 20px 15px;
+  z-index: 6;
+}
+
+.dot {
+  background-color: $burgundy;
+  height: 5px;
+  border-radius: 50%;
+  margin: 5px;
+  left: 30px;
+  position: absolute;
+  transition: 0.7s ease;
+  z-index: 4;
+  width: 5px;
+}
+
+.dot1 {
+  @extend .dot;
+}
+
+.dot2 {
+  @extend .dot;
+  top: 29px;
+}
+
+.dot3 {
+  @extend .dot;
+  top: 38px;
+}
+
+.changedot1 {
+  border-radius: 0;
+  height: 25px;
+  transition: 0.7s ease;
+  position: absolute;
+  transform: rotateZ(-45deg);
+  width: 2px;
+}
+
+.changedot2 {
+  opacity: 0;
+  transition: 0.7s ease;
+}
+
+.changedot3 {
+  border-radius: 0;
+  height: 25px;
+  transition: 0.7s ease;
+  position: absolute;
+  top: 20px;
+  transform: rotateZ(45deg);
+  width: 2px;
+}
+
+.sidelinks h3 {
+  font-size: 25px;
+  padding: 0px 20px;
+  margin: 25px auto;
+}
+
+.sidelinks h3:hover {
+  opacity: 0.65;
+}
+
+.sidelinks {
+  margin-top: 70px;
+}
+
+
+.showcase {
+  background-color: $offwhite;
+  position: relative;
+}
+
+.logowrap {
+  height: auto;
+  padding: 0px 50px;
+}
+
+.logo {
+  height: auto;
+  width: 100%;
+}
