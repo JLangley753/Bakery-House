@@ -155,21 +155,53 @@ a {
 }
 
 .specialgridwrap {
+  border: 0.5px solid $burgundy;
   display: flex;
   justify-content: center;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+  width: 85%;
 }
 
-.topspecialsgrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 30px;
+.topspecialscarousel {
+  display: flex;
+  transition-duration: 0.6s;
+  transform: translate(0px);
+  z-index: 4;
 }
 
 .special {
-  border: 0.5px solid $burgundy;
-  padding: 10px 20px;
+  border-left: 0.5px solid $burgundy;
+  border-right: 0.5px solid $burgundy;
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0px 0.5px;
 }
 
-.special1, .special2, .special3 {
+.specialimg img {
+  height: auto;
+  width: 100%;
+}
+
+.special1, .special2, .special3, .special4 {
   @extend .special;
+}
+
+.arrow {
+  position: absolute;
+  height: 50px;
+  top: 41%;
+  width: 25px;
+  z-index: 5;
+}
+
+.leftarrow {
+  @extend .arrow;
+  left: 0px;
+}
+
+.rightarrow {
+  @extend .arrow;
+  right: 0px;
 }
